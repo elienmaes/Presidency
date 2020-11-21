@@ -1,0 +1,104 @@
+/*
+Theme Name: Eletions 2020
+Author: Elien
+Description: US elections 2020
+Version: 0.1
+Requires at least: 5.0
+Tested up to: 5.5
+Requires PHP: 7.3.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+$body-bg: #cfcccc;
+$gutter: 64px;
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+background-color: $body-bg;
+    
+    .hero{
+        width:100%;
+        height:450px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .container{
+        margin:0 $gutter*2;
+        width: 100%;
+        .row{
+            display:flex;
+            &.right{
+                flex-direction: row-reverse;
+            }
+            img{
+                width: 50%;
+                height: auto;
+                margin-bottom:$gutter;
+                padding: 1rem;
+            }
+        }
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #413296;
+        padding:$gutter/2;
+        .custom-logo-link {
+            width: 200px;
+            height: auto;
+        }
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            li{
+                margin-left:$gutter/2;
+                list-style: none;
+                a{
+                    color:#fff;
+                    text-decoration: none;
+                    &:hover{
+                        color:#cac7c7;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+}
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: grey;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecebeb;
+    width: 80%;
+    margin: $gutter/2 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.single-post {
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}

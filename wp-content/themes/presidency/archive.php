@@ -1,0 +1,31 @@
+<?php get_header(); ?>
+
+<div class= "container">
+    <h1>Archive van :
+        <?php
+        if (is_author()) {
+            the_author();
+        } elseif (is_category()) {
+            the_category();
+        } elseif (is_date()) {
+            echo get_the_date('F');
+        } else {
+            echo 'zou je niet beter de wordpress file structure bekijken';
+        }
+        ?>
+    
+    </h1>
+    <?php while (have_posts()) {
+            the_posts() ?>
+        <a href="<?php the_permalink() ?>" class="blog">
+            <h2>
+                <?php the_title() ?>
+            </h2>
+            <small><?php echo get_the_date() ?></small><br/>
+            <small><?php the_date() ?></small>
+        </a>
+    <?php
+        } ?>
+</div>
+
+<?php get_footer(); ?>
