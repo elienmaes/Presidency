@@ -16,7 +16,7 @@
     
     </h1>
     <?php while (have_posts()) {
-            the_posts() ?>
+            the_post() ?>
         <a href="<?php the_permalink() ?>" class="blog">
             <h2>
                 <?php the_title() ?>

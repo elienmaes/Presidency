@@ -17,6 +17,7 @@ body{
     padding:0;
     box-sizing: border-box;
 background-color: $body-bg;
+overflow-x: hidden;
     
     .hero{
         width:100%;
@@ -30,6 +31,7 @@ background-color: $body-bg;
     .container{
         margin:0 $gutter*2;
         width: 100%;
+        
         .row{
             display:flex;
             &.right{
