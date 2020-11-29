@@ -25,7 +25,8 @@
             
                 <div>
                     <i>
-                        Geschreven door : <?php the_author_posts_link() ?>
+                        <?php _e('Written by: ', 'presidency');
+            the_author_posts_link()?>
                     </i>
                 </div>
             </div>

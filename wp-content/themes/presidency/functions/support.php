@@ -18,6 +18,11 @@ function addCustomLogo()
     ));
 }
 
+function addHTML5()
+{
+    add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ));
+}
 
 add_action('init', 'addTitleTag');
 add_action('after_setup_theme', 'addCustomLogo');
+add_action('init', 'addHTML5');
